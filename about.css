@@ -1,0 +1,309 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Garamond:wght@400&display=swap');
+
+body {
+    font-family: 'Garamond', serif;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(214, 164, 98);
+    color:#5a3e36;
+}
+
+header {
+    background: linear-gradient(to bottom, #ee722f, rgb(214, 164, 98)); 
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    border-radius: 4px;
+    text-decoration: underline;
+}
+
+.nav-logo {
+    height: 120px;
+    max-width: 170px;
+}
+
+
+.about-section {
+    background-color:rgb(214, 164, 98); 
+    color: #5a3e36;
+    text-decoration: overline;
+    text-decoration: wavy;
+    padding-top: 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 0px;
+    z-index: 1;
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%;
+    height: 100%;
+    background: url('bakeryfiles/Orange.svg') no-repeat center center/cover;
+    opacity: 0.3; /* Adjust the opacity for translucency */
+    z-index: -1; /* Ensure background image is below the content */
+}
+
+
+.about-section h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-section p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.leader-section {
+    background-color: rgb(214, 164, 98);
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+}
+
+.leader-section .leader {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 800px;
+}
+
+.leader img {
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.leader p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.footer {
+    background-color: #ee722f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ccc;
+}
+.our-vision {
+    background-color: rgb(214, 164, 98);
+    color:#5a3e36;
+    padding: 20px 5px;
+    text-align: center;
+    padding-top: 0px;
+}
+
+.our-vision h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.our-vision p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.image-transition {
+    height: 600px; /* Increased height to accommodate new content */
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: rgb(214, 164, 98);
+    padding-top: 10px;
+    padding-bottom: 4px;
+}
+
+.logo-image {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px; /* Center and space below the logo */
+}
+
+.circle-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin: 20px 0; /* Add space above and below */
+}
+
+.circle {
+    width: 200px; /* Adjusted size for circles */
+    height: 200px; /* Adjusted size for circles */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0); /* Initially transparent */
+    opacity: 0; /* Initially invisible */
+    transform: scale(0);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out, background-color 0.5s ease-out;
+}
+
+.circle-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    opacity: 0;
+    transform: scale(0);
+}
+
+.bottom-paragraph {
+    padding: 10px;
+    background-color: rgb(214, 164, 98); /* Match the section color */
+    text-align: center;
+    font-weight: lighter;
+    font-family: fantasy;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive styling */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+.scrolled {
+    background-color: #000; /* Change navbar background color when scrolled */
+}
+
+#transition-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(214, 164, 98);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transform: translateX(-100%); /* Start off-screen */
+    transition: transform 0.5s ease-in-out;
+}
+
+#transition-logo.show {
+    transform: translateX(0); /* Fully visible */
+}
+
+#transition-logo.hold {
+    transform: translateX(0);
+    transition: none; /* Hold state without animation */
+}
+
+#transition-logo.hide {
+    transform: translateX(-100%); /* Slide out to the right */
+    transition: transform 0.5s ease-in-out;
+}
+
+#transition-logo img {
+    max-width: 500px; /* Adjust as needed */
+}

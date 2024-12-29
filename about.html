@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beam of Delight - About Us</title>
+    <link rel="icon" type="image/png" href="bakeryfiles/Correct circle.png">
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <div id="transition-logo">
+        <img src="bakeryfiles/Artboard 1.svg" alt="Your Logo">
+      </div>
+      
+    <header>
+       
+        <nav> 
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+             <ul class="nav-links"> 
+                <li><a href="index.html">Home</a></li>
+                 <li><a href="about.html">About Us</a></li> 
+                </ul> <img src="bakeryfiles/Artboard 1.svg" alt="Logo" class="nav-logo"> 
+                <ul class="nav-links"> <li><a href="menu.html">Menu</a></li> 
+                    <li><a href="contact.html">Contact</a></li> </ul> </nav>
+    </header>
+    
+    <section class="about-section">
+        <h2>About Beam of Delight</h2>
+        <p>Beam of Delight Foods is a newly established business in Regina, dedicated to offering healthy, freshly baked foods tailored to individual preferences. Previously operating in Nigeria under the name Beam of Delight Limited, we gained experience in producing high-quality products such as Milk Bread, Coconut Bread, Sardine Bread, Wheat Bread, Chinchin, Cupcakes, and more. 
+            Our specialty lies in providing chemical-free, customizable baked foods, natural drinks and delivering exceptional service with guaranteed satisfaction.</p>
+    </section>
+    
+    <section class="image-transition">
+        <img src="bakeryfiles/Artboard 1.png" alt="Logo Image" class="logo-image">
+        <div class="circle-container">
+            <div class="circle">
+                <img src="bakeryfiles/Cookiee.png" alt="Image 1" class="circle-image" />
+            </div>
+            <div class="circle">
+                <img src="bakeryfiles/StockCake-Fresh Baked Bread_1734653834.jpg" alt="Image 2" class="circle-image" />
+            </div>
+            <div class="circle">
+                <img src="bakeryfiles/StockCake-Strawberry Cheesecake Dessert_1734653889.jpg" alt="Image 3" class="circle-image" />
+            </div>
+            <div class="circle">
+                <img src="bakeryfiles/image4.jpg" alt="Image 4" class="circle-image" />
+            </div>
+        </div>
+        <p class="bottom-paragraph">Affordable and stress-free satisfaction guaranteed.</p>
+    </section>
+
+    <section class="our-vision">
+        <h2>Our Vision</h2>
+        <p>Our Vision
+To be the trusted source for fresh, healthy, and delicious baked foods tailored to individual preferences, offering exceptional customer service and guaranteed stress-free satisfaction at affordable prices.</p>
+    </section>
+    
+    <section class="leader-section">
+        <div class="leader">
+            <img src="bakeryfiles/baker1.jpg" alt="Our Leader">
+            <p>Meet our esteemed leader, ...</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>Contact us:</p>
+        <p>Email: <a href="mailto:beamofdelightfoods@gmail.com">beamofdelightfoods@gmail.com</a></p>
+        <p>Phone: +1 (306) 630-3857</p>
+    </footer>
+
+    <script>
+        document.addEventListener('scroll', function() {
+            const circleContainers = document.querySelectorAll('.circle');
+            const images = document.querySelectorAll('.circle-image');
+            const scrollPercentage = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+
+            const revealThreshold = 0.25; // Adjust threshold as needed
+
+            if (scrollPercentage >= revealThreshold && scrollPercentage <= revealThreshold + 0.25) {
+                circleContainers.forEach(circle => {
+                    circle.style.opacity = '1';
+                    circle.style.transform = 'scale(1)';
+                });
+                images.forEach(image => {
+                    image.style.opacity = '1';
+                    image.style.transform = 'scale(1)';
+                });
+            } else {
+                circleContainers.forEach(circle => {
+                    circle.style.opacity = '0';
+                    circle.style.transform = 'scale(0)';
+                });
+                images.forEach(image => {
+                    image.style.opacity = '0';
+                    image.style.transform = 'scale(0)';
+                });
+            }
+        });
+    </script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelectorAll('.nav-links');
+            navLinks.forEach(nav => nav.classList.toggle('active'));
+        }
+    </script>
+    <script>document.addEventListener('DOMContentLoaded', function() {
+        const logo = document.getElementById('transition-logo');
+        const links = document.querySelectorAll('a');
+      
+        function showLogo(callback) {
+          logo.classList.add('show');
+          logo.classList.remove('hide');
+          setTimeout(() => {
+            logo.classList.add('hold');
+            setTimeout(callback, 1000); // Hold for 1 second
+          }, 500); // Initial transition duration
+        }
+      
+        function hideLogo() {
+          logo.classList.remove('hold');
+          setTimeout(() => {
+            logo.classList.add('hide');
+          }, 1000); // Delay for 1 second before starting the transition to hide
+        }
+      
+        links.forEach(link => {
+          link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const destination = event.target.href;
+      
+            showLogo(function() {
+              window.location.href = destination;
+            });
+          });
+        });
+      
+        window.addEventListener('load', function() {
+          hideLogo();
+        });
+      });
+      
+      </script>
+    
+</body>
+</html>

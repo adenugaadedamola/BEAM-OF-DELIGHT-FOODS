@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beam of Delight</title>
+    <link rel="icon" type="image/png" href="bakeryfiles/Correct circle.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="transition-logo">
+        <img src="bakeryfiles/Artboard 1.svg" alt="Your Logo">
+      </div>
+      
+    <header>
+       
+        <nav> 
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+             <ul class="nav-links"> 
+                <li><a href="index.html">Home</a></li>
+                 <li><a href="about.html">About Us</a></li> 
+                </ul> <img src="bakeryfiles/Artboard 1.svg" alt="Logo" class="nav-logo"> 
+                <ul class="nav-links"> <li><a href="menu.html">Menu</a></li> 
+                    <li><a href="contact.html">Contact</a></li> </ul> </nav>
+    </header>
+
+    <section class="welcome">
+        <h1>Beam of Delight Foods</h1>
+        <p>New in Regina</p>
+        <p>Discover affordable, stress-free satisfaction with our wide range of breads and pastries.</p>
+    </section>
+
+    <section class="message">
+        <h1>Freshly baked foods is where the goodness is.</h1>
+        <div class="image-container">
+            <!-- Left Image -->
+            <img src="bakeryfiles/StockCake-Fresh Baked Bread_1734653834.jpg" alt="Image 1" class="image left">
+            <!-- Text Paragraph -->
+            <p>Never compromise on eating the best again. Eat with us.</p>
+            <!-- Right Image -->
+            <img src="bakeryfiles/StockCake-Strawberry Cheesecake Dessert_1734653889.jpg" alt="Image 2" class="image right">
+        </div>
+           <img  src="bakeryfiles/Artboard 1.png" alt="Translucent Background 2" class="translucent-background-2">
+       
+    </section>
+    
+    <hr class="section-divider">
+    <section class="features">
+        <div class="features-section">
+            <div class="feature">
+                <img src="bakeryfiles/nutrient.png" alt="Nutrition Icon" class="feature-icon">
+                <h2 class="feature-title">Nutrition Rich</h2>
+                <p class="feature-description">Nutrient-rich with high protein, fiber, vitamins, low sugar.</p>
+            </div>
+            <div class="feature">
+                <img src="bakeryfiles/baked.png" alt="Baked Icon" class="feature-icon">
+                <h2 class="feature-title">100% Baked</h2>
+                <p class="feature-description">Freshly baked, made from scratch, oven-fresh delights.</p>
+            </div>
+            <div class="feature">
+                <img src="bakeryfiles/service.png" alt="Service Icon" class="feature-icon">
+                <h2 class="feature-title">Service</h2>
+                <p class="feature-description">Exceptional customer service, Tailoring our products to your need.</p>
+            </div>
+        </div>
+    </section>
+    
+    
+    <section class="scatter-message">
+        <div class="image-scatter-container">
+            <img src="bakeryfiles/DALL·E 2024-12-19 19.11.04 - A realistic depiction of a single loaf of bread placed on a blank white background. The bread is golden brown with a crusty surface, showcasing natura.png" alt="Image 1" class="scatter-image image1">
+            <img src="bakeryfiles/DALL·E 2024-12-19 19.12.10 - A decorated cupcake with intricate icing swirls, delicate sugar sprinkles, and a vibrant cherry on top. The icing should be soft and smooth, with a mi.png" alt="Image 2" class="scatter-image image2">
+            <img src="bakeryfiles/DALL·E 2024-12-19 19.13.24 - A beautifully decorated cinnamon roll on a blank background. The cinnamon roll has a golden-brown, flaky exterior with a swirl of rich, brown cinnamon.png" alt="Image 3" class="scatter-image image3">
+            <img src="bakeryfiles/Cookiee.png" alt="Image 4" class="scatter-image image4">
+            <img src="bakeryfiles/Sausage roll.png" alt="Image 5" class="scatter-image image5">
+            <img src="bakeryfiles/pie.png" alt="Image 6" class="scatter-image image6">
+            <p class="hidden-message">
+                <span style="font-weight: bold;">Baked</span>
+                <span style="color: red; font-style: italic; font-weight: lighter; font-family: cursive;"> with love.</span><br>
+               <span style="font-size: 1rem;">It's baking as it should be.</span> 
+            </p>
+        </div>
+    </section>
+    <hr class="section-divider">
+    <section class="menu-link">
+        <div class="menu-link-content">
+            <div class="text-content">
+                <h2>Discover Our Delicious Menu</h2>
+                <p>Explore our wide range of handmade bakery items, brunch specials, and freshly made smoothies. Click below to see our full menu.</p>
+                <a href="menu.html" class="menu-button">See Our Menu</a>
+            </div>
+            <div class="image-content">
+                <img src="bakeryfiles/Artboard 1.png" alt="Decorative Background" class="translucent-background">
+                <img src="bakeryfiles/food-image.jpg" alt="Delicious Food" class="main-image">
+            </div>
+        </div>
+    </section>
+    
+
+    <section class="our-vision">
+        <h2>Our Vision</h2>
+        <p>To be the trusted source for fresh, healthy, and delicious baked foods tailored to individual preferences, <br>offering exceptional customer service and guaranteed stress-free satisfaction at affordable prices.</p>
+    </section>
+    
+
+    <footer class="footer">
+        <p>Contact us:</p>
+        <p>Email: <a href="mailto:beamofdelightfoods@gmail.com">beamofdelightfoods@gmail.com</a></p>
+        <p>Phone: +1 (306) 630-3857</p>
+    
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+    const leftImage = document.querySelector('.image.left');
+    const rightImage = document.querySelector('.image.right');
+    
+    // Add 'visible' class to images after a slight delay for the transition effect
+    setTimeout(function () {
+        leftImage.classList.add('visible');
+        rightImage.classList.add('visible');
+    }, 500); // Adjust the delay as needed
+});
+
+// Intersection Observer for the scatter section
+const scatterSection = document.querySelector('.scatter-message');
+const scatterImages = document.querySelectorAll('.scatter-image');
+const hiddenMessage = document.querySelector('.hidden-message');
+
+const observerOptions = {
+    root: null, // viewport
+    rootMargin: '0px',
+    threshold: 0.1 // Trigger when 10% of the section is visible
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            // Add 'scatter' class to images and reveal the hidden message
+            scatterImages.forEach(image => {
+                image.classList.add('scatter');
+            });
+            hiddenMessage.classList.add('reveal');
+        } else {
+            // Reset the images and message when the section is out of view
+            scatterImages.forEach(image => {
+                image.classList.remove('scatter');
+            });
+            hiddenMessage.classList.remove('reveal');
+        }
+    });
+}, observerOptions);
+
+observer.observe(scatterSection); // Observe the scatter section
+
+    </script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelectorAll('.nav-links');
+            navLinks.forEach(nav => nav.classList.toggle('active'));
+        }
+
+    </script>
+    <script>document.addEventListener('DOMContentLoaded', function() {
+        const logo = document.getElementById('transition-logo');
+        const links = document.querySelectorAll('a');
+      
+        function showLogo(callback) {
+          logo.classList.add('show');
+          logo.classList.remove('hide');
+          setTimeout(() => {
+            logo.classList.add('hold');
+            setTimeout(callback, 1000); // Hold for 1 second
+          }, 500); // Initial transition duration
+        }
+      
+        function hideLogo() {
+          logo.classList.remove('hold');
+          setTimeout(() => {
+            logo.classList.add('hide');
+          }, 1000); // Delay for 1 second before starting the transition to hide
+        }
+      
+        links.forEach(link => {
+          link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const destination = event.target.href;
+      
+            showLogo(function() {
+              window.location.href = destination;
+            });
+          });
+        });
+      
+        window.addEventListener('load', function() {
+          hideLogo();
+        });
+      });
+      
+      </script>
+    
+</body>
+</html>

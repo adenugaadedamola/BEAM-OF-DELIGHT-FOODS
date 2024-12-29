@@ -1,0 +1,307 @@
+ 
+@import url('https://fonts.googleapis.com/css2?family=Garamond:wght@400&display=swap');
+
+body {
+    font-family: 'Garamond', serif;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(214, 164, 98);
+    color:#5a3e36;
+}
+
+header {
+    background: linear-gradient(to bottom,  #ee722f, rgb(214, 164, 98)); /* Gradient black */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Space between logo and links */
+    width: 100%;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px; /* Spacing between the links */
+}
+
+.nav-links li {
+    margin: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    border-radius: 4px;
+    text-decoration: underline;
+}
+
+.nav-logo {
+    height: 120px; /* Increased the logo size */
+    max-width: 170px; /* Adjust the width if needed */
+}
+
+nav {
+    position: relative;
+}
+
+.nav-links:first-child {
+    margin-right: 10px; /* Adjust to bring left links closer to the logo */
+}
+
+.nav-links:last-child {
+    margin-left: 10px; /* Adjust to bring right links closer to the logo */
+}
+
+
+
+.footer {
+    background-color: #ee722f;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ccc;
+}
+
+.contact-section {
+    padding: 50px 20px;
+    background-color: rgb(214, 164, 98);
+    color:#5a3e36;
+    text-align: center;
+    position: relative;
+   
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2; 
+}
+
+.contact-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+.contact-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-text {
+    flex: 2;
+    min-width: 300px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.contact-text h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.contact-text p {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+.contact-form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form-wrapper label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+
+
+.contact-form-wrapper button {
+    background-color: rgb(107, 73, 29);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form-wrapper button:hover {
+    background-color: rgb(144, 106, 58);
+}
+.contact-form-wrapper input, 
+.contact-form-wrapper textarea {
+    border: none; /* Remove default border */
+    border-bottom: 2px solid #65543e; /* Add a bottom border for the line */
+    background-color: transparent; /* Remove background color */
+    outline: none; /* Remove the outline */
+    width: 100%; /* Full width for consistent design */
+    padding: 5px 0; /* Padding to make the line input more readable */
+    margin-bottom: 15px; /* Space between input fields */
+    font-size: 16px; /* Adjust font size for better readability */
+}
+
+.contact-form-wrapper input:focus, 
+.contact-form-wrapper textarea:focus {
+    border-bottom-color: rgb(107, 73, 29); /* Highlight the bottom border on focus */
+}
+
+.translucent-background-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.translucent-background {
+    position: absolute;
+    left: -150%; /* Adjust position as needed */
+    width: 120%; /* Adjust size as needed */
+    height: auto;
+    opacity: 0.1; /* Adjust opacity */
+    transform: rotate(-10deg);
+    z-index: 1;
+}
+
+
+.form-message {
+    margin-top: 15px;
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive styling */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links li {
+        width: 100%;
+        margin: 0;
+    }
+
+    .nav-logo {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+.scrolled {
+    background-color: #000; /* Change navbar background color when scrolled */
+}
+#transition-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(214, 164, 98);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transform: translateX(-100%); /* Start off-screen */
+    transition: transform 0.5s ease-in-out;
+}
+
+#transition-logo.show {
+    transform: translateX(0); /* Fully visible */
+}
+
+#transition-logo.hold {
+    transform: translateX(0);
+    transition: none; /* Hold state without animation */
+}
+
+#transition-logo.hide {
+    transform: translateX(-100%); /* Slide out to the right */
+    transition: transform 0.5s ease-in-out;
+}
+
+#transition-logo img {
+    max-width: 500px; /* Adjust as needed */
+}

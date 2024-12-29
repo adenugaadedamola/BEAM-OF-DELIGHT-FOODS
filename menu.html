@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beam of Delight</title>
+    <link rel="icon" type="image/png" href="bakeryfiles/Correct circle.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="transition-logo">
+        <img src="bakeryfiles/Artboard 1.svg" alt="Your Logo">
+      </div>
+      
+    <header>
+       
+        <nav> 
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+             <ul class="nav-links"> 
+                <li><a href="index.html">Home</a></li>
+                 <li><a href="about.html">About Us</a></li> 
+                </ul> <img src="bakeryfiles/Artboard 1.svg" alt="Logo" class="nav-logo"> 
+                <ul class="nav-links"> <li><a href="menu.html">Menu</a></li> 
+                    <li><a href="contact.html">Contact</a></li> </ul> </nav>
+    </header>
+
+    <section class="welcome">
+        <h1>COMING SOON
+            
+        </h1>
+        
+    </section>
+
+ 
+    
+
+    <section class="our-vision">
+        <h2>Our Vision</h2>
+        <p>To be the trusted source for fresh, healthy, and delicious baked foods tailored to individual preferences, <br>offering exceptional customer service and guaranteed stress-free satisfaction at affordable prices.</p>
+    </section>
+    
+
+    <footer class="footer">
+        <p>Contact us:</p>
+        <p>Email: <a href="mailto:beamofdelightfoods@gmail.com">beamofdelightfoods@gmail.com</a></p>
+        <p>Phone: +1 (306) 630-3857</p>
+    
+    </footer>
+
+   
+    <script>document.addEventListener('DOMContentLoaded', function() {
+        const logo = document.getElementById('transition-logo');
+        const links = document.querySelectorAll('a');
+      
+        function showLogo(callback) {
+          logo.classList.add('show');
+          logo.classList.remove('hide');
+          setTimeout(() => {
+            logo.classList.add('hold');
+            setTimeout(callback, 1000); // Hold for 1 second
+          }, 500); // Initial transition duration
+        }
+      
+        function hideLogo() {
+          logo.classList.remove('hold');
+          setTimeout(() => {
+            logo.classList.add('hide');
+          }, 1000); // Delay for 1 second before starting the transition to hide
+        }
+      
+        links.forEach(link => {
+          link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const destination = event.target.href;
+      
+            showLogo(function() {
+              window.location.href = destination;
+            });
+          });
+        });
+      
+        window.addEventListener('load', function() {
+          hideLogo();
+        });
+      });
+      
+      </script>
+    <script>
+        function toggleMenu() {
+            const navLinks = document.querySelectorAll('.nav-links');
+            navLinks.forEach(nav => nav.classList.toggle('active'));
+        }
+
+    </script>
+</body>
+</html>
