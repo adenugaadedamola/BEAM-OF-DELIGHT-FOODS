@@ -70,11 +70,11 @@ nav {
 }
 
 .nav-links:first-child {
-    margin-right: 10px; /* Adjust to bring left links closer to the logo */
+    margin-right: 20px; /* Adjust to bring left links closer to the logo */
 }
 
 .nav-links:last-child {
-    margin-left: 10px; /* Adjust to bring right links closer to the logo */
+    margin-left: 20px; /* Adjust to bring right links closer to the logo */
 }
 
 
