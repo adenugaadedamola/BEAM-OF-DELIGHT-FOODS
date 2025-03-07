@@ -13,15 +13,33 @@
       </div>
       
     <header>
-       
-        <nav> 
-            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-             <ul class="nav-links"> 
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                 <li><a href="about.html">About Us</a></li> 
-                </ul> <img src="bakeryfiles/Artboard 1.svg" alt="Logo" class="nav-logo"> 
-                <ul class="nav-links"> <li><a href="menu.html">Menu</a></li> 
-                    <li><a href="contact.html">Contact</a></li> </ul> </nav>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        
+            <img src="bakeryfiles/Artboard 1.svg" alt="Logo" class="nav-logo">
+        
+            <ul class="nav-links">
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        
+            <ul class="dropdown-content">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        
     </header>
 
     <section class="welcome">
@@ -164,14 +182,25 @@ const observer = new IntersectionObserver((entries, observer) => {
 observer.observe(scatterSection); // Observe the scatter section
 
     </script>
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelectorAll('.nav-links');
-            navLinks.forEach(nav => nav.classList.toggle('active'));
-            document.body.classList.toggle("no-scroll"); 
-        }
+   <script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.dropdown-content'); // Dropdown menu
+        const hamburger = document.querySelector('.menu-icon'); // Hamburger icon
+        const body = document.body; // Body element to prevent scrolling when menu is open
+        
+        // Toggle visibility of the dropdown menu
+        navLinks.classList.toggle('show'); // Show or hide the dropdown
 
-    </script>
+        // Toggle hamburger icon transformation (turn it into an "X" when clicked)
+        hamburger.classList.toggle('active');
+
+        // Prevent scrolling when the menu is open
+        body.classList.toggle("no-scroll");
+    }
+</script>
+
+
+    
     <script>document.addEventListener('DOMContentLoaded', function() {
         const logo = document.getElementById('transition-logo');
         const links = document.querySelectorAll('a');

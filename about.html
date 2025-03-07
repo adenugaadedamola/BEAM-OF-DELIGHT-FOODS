@@ -7,22 +7,48 @@
     <link rel="icon" type="image/png" href="bakeryfiles/Correct circle.png">
     <link rel="stylesheet" href="about.css">
 </head>
+
 <body>
     <div id="transition-logo">
         <img src="bakeryfiles/Artboard 1.svg" alt="Your Logo">
       </div>
-      
+
+
     <header>
        
-        <nav> 
-            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-             <ul class="nav-links"> 
+        <nav>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        
+            <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
-                 <li><a href="about.html">About Us</a></li> 
-                </ul> <img src="bakeryfiles/Artboard 1.svg" alt="Logo" class="nav-logo"> 
-                <ul class="nav-links"> <li><a href="menu.html">Menu</a></li> 
-                    <li><a href="contact.html">Contact</a></li> </ul> </nav>
+                <li><a href="about.html">About Us</a></li>
+            </ul>
+        
+            <img src="bakeryfiles/Artboard 1.svg" alt="Logo" class="nav-logo">
+        
+            <ul class="nav-links">
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        
+            <ul class="dropdown-content">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
     </header>
+
+
+
+
+
     
     <section class="about-section">
         <h2>About Beam of Delight</h2>
@@ -31,6 +57,11 @@
          
         </section>
     
+
+
+
+
+
     <section class="image-transition">
         <img src="bakeryfiles/Artboard 1.svg" alt="Logo Image" class="logo-image">
         <div class="circle-container">
@@ -50,12 +81,21 @@
         <p class="bottom-paragraph">Affordable and stress-free satisfaction guaranteed.</p>
     </section>
 
+
+
+
+
+
     <section class="our-vision">
         <h2>Our Vision</h2>
         <p>Our Vision
 To be the trusted source for fresh, healthy, and delicious baked foods tailored to individual preferences, offering exceptional customer service and guaranteed stress-free satisfaction at affordable prices.</p>
     </section>
     
+
+
+
+
     <section class="leader-section">
         <div class="leader">
             <img src="bakeryfiles/baker1.jpg" alt="Our Leader">
@@ -63,11 +103,21 @@ To be the trusted source for fresh, healthy, and delicious baked foods tailored 
         </div>
     </section>
 
+
+
+
+
     <footer class="footer">
         <p>Contact us:</p>
         <p>Email: <a href="mailto:beamofdelightfoods@gmail.com">beamofdelightfoods@gmail.com</a></p>
         <p>Phone: +1 (306) 630-3857</p>
     </footer>
+
+
+
+
+
+
 
     <script>
         document.addEventListener('scroll', function() {
@@ -98,13 +148,45 @@ To be the trusted source for fresh, healthy, and delicious baked foods tailored 
             }
         });
     </script>
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelectorAll('.nav-links');
-            navLinks.forEach(nav => nav.classList.toggle('active'));
-            document.body.classList.toggle("no-scroll"); 
-        }
-    </script>
+
+
+
+
+
+
+   <script>
+    function toggleMenu() {
+        const navLinks = document.querySelector('.dropdown-content'); // Dropdown menu
+        const hamburger = document.querySelector('.menu-icon'); // Hamburger icon
+        const body = document.body; // Body element to prevent scrolling when menu is open
+        
+        // Toggle visibility of the dropdown menu
+        navLinks.classList.toggle('show'); // Show or hide the dropdown
+
+        // Toggle hamburger icon transformation (turn it into an "X" when clicked)
+        hamburger.classList.toggle('active');
+
+        // Prevent scrolling when the menu is open
+        body.classList.toggle("no-scroll");
+    }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script>document.addEventListener('DOMContentLoaded', function() {
         const logo = document.getElementById('transition-logo');
         const links = document.querySelectorAll('a');

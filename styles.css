@@ -11,12 +11,40 @@ body {
 body {
     font-size: clamp(1rem, 2vw, 1.5rem);
 }
-.no-scroll {
-    overflow: hidden;
+/* Hamburger Menu Icon */
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    transition: transform 0.3s ease;  /* Smooth transition for icon */
 }
 
+.bar {
+    margin: 2PX;
+    height: 4px;
+    background-color: #333;
+    transition: all 0.3s ease;  /* Smooth transition for bars */
+}
+
+/* When the hamburger menu is active, change the bars to form an "X" */
+.menu-icon.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(6px);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-6px);
+}
+
+/* Header Styles */
 header {
-    background: linear-gradient(to bottom,  #782c03, rgb(214, 164, 98)); /* Gradient black */
+    background: linear-gradient(to bottom, #782c03, rgb(214, 164, 98)); /* Gradient black */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -26,22 +54,25 @@ header {
     padding: 10px 20px;
 }
 
+/* Main Navigation Styles */
 nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px; /* Space between logo and links */
+    justify-content: space-between; /* Adjust spacing between elements */
     width: 100%;
+    position: relative;
 }
 
+/* Navigation Links */
 .nav-links {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 15px; /* Spacing between the links */
+    gap: 15px; /* Space between links */
 }
 
+/* Individual Nav Links */
 .nav-links li {
     margin: 0;
 }
@@ -59,10 +90,65 @@ nav {
     text-decoration: underline;
 }
 
+/* Logo Styling */
 .nav-logo {
-    height: 120px; /* Increased the logo size */
-    max-width: 170px; /* Adjust the width if needed */
+    height: 120px; /* Adjusted logo size */
+    max-width: 170px;
 }
+
+/* Dropdown Menu Styles */
+.dropdown-content {
+    display: none; /* Hide dropdown by default */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Position dropdown relative to parent */
+    background-color: #b87e28; /* Background color */
+    min-width: 70px;
+    top: 80px; /* Adjust dropdown position */
+    left: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0; /* Ensure it's hidden */
+    transition: opacity 0.3s ease;
+}
+
+.dropdown-content.show {
+    display: flex;
+    opacity: 70%; /* Fade in dropdown */
+}
+
+.dropdown-content li {
+    padding: 10px 20px;
+    list-style: none;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+/* Prevent scrolling when menu is open */
+
+
+/* Media Queries for Responsive Design */
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none; /* Hide menu icon on large screens */
+    }
+    .dropdown-content {
+        display: none; /* Hide dropdown on large screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide normal links on small screens */
+    }
+    .menu-icon {
+        display: block; /* Show hamburger icon on small screens */
+    }
+}
+
 
 nav {
     position: relative;

@@ -9,12 +9,6 @@ body {
     background-color: rgb(214, 164, 98);
     color:#5a3e36;
 }
-body {
-    font-size: clamp(1rem, 2vw, 1.5rem);
-}
-.no-scroll {
-    overflow: hidden;
-}
 
 header {
     background: linear-gradient(to bottom, #782c03, rgb(214, 164, 98)); 
@@ -26,31 +20,58 @@ header {
     align-items: center;
     padding: 10px 20px;
 }
+/* Hamburger Menu Icon */
+.menu-icon {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+    transition: transform 0.3s ease;  /* Smooth transition for icon */
+}
 
+.bar {
+    margin: 2PX;
+    height: 4px;
+    background-color: #333;
+    transition: all 0.3s ease;  /* Smooth transition for bars */
+}
+
+/* When the hamburger menu is active, change the bars to form an "X" */
+.menu-icon.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(6px);
+}
+
+.menu-icon.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-6px);
+}
+
+
+
+/* Main Navigation Styles */
 nav {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-between; /* Adjust spacing between elements */
     width: 100%;
+    position: relative;
 }
 
+/* Navigation Links */
 .nav-links {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 15px;
-}
-.nav-links:first-child {
-    margin-right: 20px; /* Adjust to bring left links closer to the logo */
+    gap: 15px; /* Space between links */
 }
 
-.nav-links:last-child {
-    margin-left: 20px; /* Adjust to bring right links closer to the logo */
-}
-
-
+/* Individual Nav Links */
 .nav-links li {
     margin: 0;
 }
@@ -61,12 +82,73 @@ nav {
     padding: 10px 20px;
     display: block;
     transition: background-color 0.3s ease;
+    font-size: 1.5rem;
 }
 
 .nav-links a:hover {
     border-radius: 4px;
     text-decoration: underline;
 }
+
+/* Logo Styling */
+.nav-logo {
+    height: 120px; /* Adjusted logo size */
+    max-width: 170px;
+}
+
+/* Dropdown Menu Styles */
+.dropdown-content {
+    display: none; /* Hide dropdown by default */
+    flex-direction: column; /* Stack items vertically */
+    position: absolute; /* Position dropdown relative to parent */
+    background-color: #b87e28; /* Background color */
+    min-width: 70px;
+    top: 80px; /* Adjust dropdown position */
+    left: 0;
+    margin: 0;
+    padding: 0;
+    opacity: 0; /* Ensure it's hidden */
+    transition: opacity 0.3s ease;
+}
+
+.dropdown-content.show {
+    display: flex;
+    opacity: 70%; /* Fade in dropdown */
+}
+
+.dropdown-content li {
+    padding: 10px 20px;
+    list-style: none;
+}
+
+.dropdown-content a {
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+}
+
+/* Prevent scrolling when menu is open */
+
+
+/* Media Queries for Responsive Design */
+@media (min-width: 769px) {
+    .menu-icon {
+        display: none; /* Hide menu icon on large screens */
+    }
+    .dropdown-content {
+        display: none; /* Hide dropdown on large screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide normal links on small screens */
+    }
+    .menu-icon {
+        display: block; /* Show hamburger icon on small screens */
+    }
+}
+
 
 .nav-logo {
     height: 120px;
@@ -241,48 +323,6 @@ nav {
 }
 
 
-
-
-
-
-
-
-
-
-
-/* Responsive styling */
-.menu-icon {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-    }
-
-    .nav-links li {
-        width: 100%;
-        margin: 0;
-    }
-
-    .nav-logo {
-        display: block;
-        margin: 0 auto;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    .nav-links.active {
-        display: flex;
-    }
-}
 
 .scrolled {
     background-color: #000; /* Change navbar background color when scrolled */
