@@ -163,6 +163,9 @@ nav {
         display: block; /* Show hamburger icon on small screens */
     }
 }
+body, html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
 
 nav {

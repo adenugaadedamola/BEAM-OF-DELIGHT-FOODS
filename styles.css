@@ -21,6 +21,9 @@ body {
     height: 20px;
     transition: transform 0.3s ease;  /* Smooth transition for icon */
 }
+body, html {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
 
 .bar {
     margin: 2PX;
