@@ -25,20 +25,29 @@
     </header>
 
     <section class="welcome">
-        <h1>Beam of Delight Foods</h1>
+        <h1 style="font-size: 100px; text-shadow: 3px 3px 5px rgba(103, 81, 39, 0.799); font-size: clamp(3rem, 2vw, 1.5rem);
+        ">Beam of Delight Foods</h1>
         <p>New in Regina</p>
         <p>Discover affordable, stress-free satisfaction with our wide range of breads and pastries.</p>
+        <div class="social-links">
+            <a href="https://pin.it/3vI54Kjdi" target="_blank" style="color:  #5a3e36;">media</a> |
+            <a href="https://www.linkedin.com" target="_blank" style="color:  #5a3e36;">LinkedIn</a> |
+            <a href="https://www.instagram.com" target="_blank" style="color:  #5a3e36;">Instagram</a> 
+        
+        </div>
     </section>
 
     <section class="message">
         <h1>Freshly baked foods is where the goodness is.</h1>
         <div class="image-container">
             <!-- Left Image -->
-            <img src="bakeryfiles/StockCake-Fresh Baked Bread_1734653834.jpg" alt="Image 1" class="image left">
+            <img src="foodimg/bakery aesthetic.jpg" alt="Image 1" class="image left" style="transition: transform 0.3s ease-in-out;
+    mix-blend-mode: multiply; ">
             <!-- Text Paragraph -->
             <p>Never compromise on eating the best again. Eat with us.</p>
             <!-- Right Image -->
-            <img src="bakeryfiles/StockCake-Strawberry Cheesecake Dessert_1734653889.jpg" alt="Image 2" class="image right">
+            <img src="foodimg/baguette 2.jpg" alt="Image 2" class="image right" style="transition: transform 0.3s ease-in-out;
+    mix-blend-mode: multiply; ">
         </div>
            <img  src="bakeryfiles/Artboard 1.png" alt="Translucent Background 2" class="translucent-background-2">
        
@@ -90,8 +99,9 @@
                 <a href="menu.html" class="menu-button">See Our Menu</a>
             </div>
             <div class="image-content">
-                <img src="bakeryfiles/Artboard 1.png" alt="Decorative Background" class="translucent-background">
-                <img src="bakeryfiles/food-image.jpg" alt="Delicious Food" class="main-image">
+                <img src="bakeryfiles/Artboard 1.png" alt="Decorative Background" class="translucent-background" >
+                <img src="foodimg/baguette 3.jpg" alt="Delicious Food" class="main-image" style="transition: transform 0.3s ease-in-out;
+    mix-blend-mode: multiply; ">
             </div>
         </div>
     </section>
@@ -170,7 +180,7 @@ observer.observe(scatterSection); // Observe the scatter section
           logo.classList.remove('hide');
           setTimeout(() => {
             logo.classList.add('hold');
-            setTimeout(callback, 1000); // Hold for 1 second
+            setTimeout(callback, 300); // Hold for 1 second
           }, 500); // Initial transition duration
         }
       
@@ -178,7 +188,7 @@ observer.observe(scatterSection); // Observe the scatter section
           logo.classList.remove('hold');
           setTimeout(() => {
             logo.classList.add('hide');
-          }, 1000); // Delay for 1 second before starting the transition to hide
+          }, 300); // Delay for 1 second before starting the transition to hide
         }
       
         links.forEach(link => {

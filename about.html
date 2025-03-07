@@ -26,15 +26,16 @@
     
     <section class="about-section">
         <h2>About Beam of Delight</h2>
-        <p>Beam of Delight Foods is a newly established business in Regina, dedicated to offering healthy, freshly baked foods tailored to individual preferences. Previously operating in Nigeria under the name Beam of Delight Limited, we gained experience in producing high-quality products such as Milk Bread, Coconut Bread, Sardine Bread, Wheat Bread, Chinchin, Cupcakes, and more. 
+        <p style="font-weight: bold;">Beam of Delight Foods is a newly established business in Regina, dedicated to offering healthy, freshly baked foods tailored to individual preferences. Previously operating in Nigeria under the name Beam of Delight Limited, we gained experience in producing high-quality products such as Milk Bread, Coconut Bread, Sardine Bread, Wheat Bread, Chinchin, Cupcakes, and more. 
             Our specialty lies in providing chemical-free, customizable baked foods, natural drinks and delivering exceptional service with guaranteed satisfaction.</p>
-    </section>
+         
+        </section>
     
     <section class="image-transition">
-        <img src="bakeryfiles/Artboard 1.png" alt="Logo Image" class="logo-image">
+        <img src="bakeryfiles/Artboard 1.svg" alt="Logo Image" class="logo-image">
         <div class="circle-container">
             <div class="circle">
-                <img src="bakeryfiles/Cookiee.png" alt="Image 1" class="circle-image" />
+                <img src="foodimg/croissant.jpg" alt="Image 1" class="circle-image" />
             </div>
             <div class="circle">
                 <img src="bakeryfiles/StockCake-Fresh Baked Bread_1734653834.jpg" alt="Image 2" class="circle-image" />
@@ -43,7 +44,7 @@
                 <img src="bakeryfiles/StockCake-Strawberry Cheesecake Dessert_1734653889.jpg" alt="Image 3" class="circle-image" />
             </div>
             <div class="circle">
-                <img src="bakeryfiles/image4.jpg" alt="Image 4" class="circle-image" />
+                <img src="foodimg/scones.jpg" alt="Image 4" class="circle-image" />
             </div>
         </div>
         <p class="bottom-paragraph">Affordable and stress-free satisfaction guaranteed.</p>
@@ -112,7 +113,7 @@ To be the trusted source for fresh, healthy, and delicious baked foods tailored 
           logo.classList.remove('hide');
           setTimeout(() => {
             logo.classList.add('hold');
-            setTimeout(callback, 1000); // Hold for 1 second
+            setTimeout(callback, 300); // Hold for 1 second
           }, 500); // Initial transition duration
         }
       
@@ -120,7 +121,7 @@ To be the trusted source for fresh, healthy, and delicious baked foods tailored 
           logo.classList.remove('hold');
           setTimeout(() => {
             logo.classList.add('hide');
-          }, 1000); // Delay for 1 second before starting the transition to hide
+          }, 300); // Delay for 1 second before starting the transition to hide
         }
       
         links.forEach(link => {

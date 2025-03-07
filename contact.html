@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style=" overflow-x: hidden;">
     
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,21 @@
     <title>Contact Us</title>
     <link rel="icon" type="image/png" href="bakeryfiles/Correct circle.png">
     <link rel="stylesheet" href="contacts.css">
+<style>
+    .translucent-background-2 {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 50%;
+    height: 50%;
+    padding-top: 0px;
+    height: auto;
+    opacity: 0.1; /* Subtle transparency for a lightweight visual */
+    transform: rotate(-10deg);
+    z-index: -1; /* Ensures it remains below foreground content */
+}
 
+</style>
 </head>
 <body>
     <div id="transition-logo">
@@ -28,19 +42,27 @@
     <section class="contact-section">
         <div class="contact-wrapper">
             <div class="contact-image">
-                <img src="bakeryfiles/1734642395417mjeuhgfm.png" alt="Contact Image">
+                <img src="foodimg/doughnut-2561101_1280.jpg" alt="Contact Image" style="transition: transform 0.3s ease-in-out;
+    mix-blend-mode: multiply; ">
+    <img  src="bakeryfiles/Artboard 1.png" alt="Translucent Background 2" class="translucent-background-2">
+       
             </div>
             <div class="contact-text">
                 <h1>Contact Us</h1>
-                <p>Have a question, a special request, or want to order?</p>
-                <p>We'd love to hear from you! Send us a message! <br> Reach out to us via phone or email.</p>
-                <p>Email: <a href="mailto:beamofdelightfoods@gmail.com">beamofdelightfoods@gmail.com</a></p>
-                <p>Phone: +1 (306) 630-3857</p>
+                <p style="font-weight: bold;">Have a question, a special request, or want to order?</p>
+                <p style="font-weight: bold;">We'd love to hear from you! Send us a message! <br> Reach out to us via phone or email.</p>
+                <p style="font-weight: bold;">Email: <a href="mailto:beamofdelightfoods@gmail.com" style="color:  #5a3e36;">beamofdelightfoods@gmail.com</a></p>
+                <p style="font-weight: bold;">Phone: +1 (306) 630-3857</p>
+                <div class="social-links">
+                    <a href="https://pin.it/3vI54Kjdi" target="_blank" style="color:  #5a3e36;">media</a> |
+                    <a href="https://www.linkedin.com" target="_blank" style="color:  #5a3e36;">LinkedIn</a> |
+                    <a href="https://www.instagram.com" target="_blank" style="color:  #5a3e36;">Instagram</a> 
+                    
+                </div>
             </div>
+            
         </div>
-        <div class="translucent-background-container">
-            <img src="bakeryfiles/translucent-background.png" alt="Translucent Background" class="translucent-background">
-        </div>
+        
     </section>
     
     <div class="contact-form-wrapper">
@@ -60,12 +82,7 @@
         <p>Contact us:</p>
         <p>Email: <a href="mailto:beamofdelightfoods@gmail.com">beamofdelightfoods@gmail.com</a></p>
         <p>Phone: +1 (306) 630-3857</p>
-        <div class="social-links">
-            <a href="https://pin.it/3vI54Kjdi" target="_blank">Pinterest</a> |
-            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a> |
-            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
-            <a href="https://www.behance.net" target="_blank">Behance</a>
-        </div>
+       
     </footer>
 
     <script>
@@ -132,7 +149,7 @@
     logo.classList.remove('hide');
     setTimeout(() => {
       logo.classList.add('hold');
-      setTimeout(callback, 1000); // Hold for 1 second
+      setTimeout(callback, 300); // Hold for 1 second
     }, 500); // Initial transition duration
   }
 
@@ -140,7 +157,7 @@
     logo.classList.remove('hold');
     setTimeout(() => {
       logo.classList.add('hide');
-    }, 1000); // Delay for 1 second before starting the transition to hide
+    }, 300); // Delay for 1 second before starting the transition to hide
   }
 
   links.forEach(link => {

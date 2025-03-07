@@ -1,96 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head style=" overflow-x: hidden;  width: 100%;margin: 0;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beam of Delight</title>
+    <title>Beam of Delight - Menu</title>
     <link rel="icon" type="image/png" href="bakeryfiles/Correct circle.png">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Garamond', serif;
+            font-style: italic;
+            margin: 0;
+            padding: 0;
+            background-color: rgb(214, 164, 98);
+            color: #5a3e36;
+        }
+
+        .menu-container {
+            max-width: 800px;
+            padding: 50px 20px;
+            margin-left: 50px;
+            padding-left: 50px;
+        }
+
+        .menu-header {
+            font-size: 3.5rem;
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-decoration: underline;
+        }
+
+        .menu-description {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight:normal;
+        }
+
+        .menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            font-weight: bolder;
+            cursor: pointer;
+            transition: color 0.3s ease-in-out;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(90, 62, 54, 0.3);
+        }
+
+        .menu li:hover {
+            color: #9e6954;
+        }
+
+        .menu li span {
+            display: block;
+            font-size: 1.5rem;
+            font-weight: bold;
+            opacity: 0.8;
+        }
+
+        .menu-image-container {
+            position: fixed;
+            top: 50%;
+            right: 50px;
+            transform: translateY(-50%);
+            width: 300px;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            pointer-events: none;
+            transition: transform 0.3s ease-in-out;
+           
+            
+        }
+        body {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
+
+
+        .menu-image-container img {
+            width: 100%;
+            height: auto;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+    
+        }
+        .translucent-background-2 {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    padding-top: 380px;
+    height: auto;
+    opacity: 0.1; /* Subtle transparency for a lightweight visual */
+    transform: rotate(-10deg);
+    z-index: -1; /* Ensures it remains below foreground content */
+}
+
+
+    </style>
 </head>
-<body>
-    <div id="transition-logo">
-        <img src="bakeryfiles/Artboard 1.svg" alt="Your Logo">
-      </div>
-      
+<body style=" overflow-x: hidden;  width: 100%;margin: 0;">
     <header>
-       
         <nav> 
             <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-             <ul class="nav-links"> 
+            <ul class="nav-links"> 
                 <li><a href="index.html">Home</a></li>
-                 <li><a href="about.html">About Us</a></li> 
-                </ul> <img src="bakeryfiles/Artboard 1.svg" alt="Logo" class="nav-logo"> 
-                <ul class="nav-links"> <li><a href="menu.html">Menu</a></li> 
-                    <li><a href="contact.html">Contact</a></li> </ul> </nav>
+                <li><a href="about.html">About Us</a></li> 
+            </ul> 
+            <img src="bakeryfiles/Artboard 1.svg" alt="Logo" class="nav-logo"> 
+            <ul class="nav-links"> 
+                <li><a href="menu.html">Menu</a></li> 
+                <li><a href="contact.html">Contact</a></li> 
+            </ul> 
+        </nav>
     </header>
 
-    <section class="welcome">
-        <h1>COMING SOON
+    <div class="menu-container">
+        <div class="menu-header">Our Menu</div>
+        <div class="menu-description" style="font-weight: bolder; font-size: 1.5rem;">
+         Our Menu is NOT limited to the following ingridients/flavours we also work on request, so if you have a request, please contact us!!!
+         <img  src="bakeryfiles/Artboard 1.png" alt="Translucent Background 2" class="translucent-background-2">
+       
+        </div>
+
+        <!-- Bread Section -->
+        <h2 style="font-size:2rem; ">Breads</h2>
+        <ul class="menu">
+            <li data-image="/foodimg/sour dough.jpg">Sour Dough 
+                <span>Made using traditional fermentation—no yeast bread.</span></li>
+            <li data-image="/foodimg/sour dough.jpg">Coconut Bread
+                 <span>Made with fresh Coconut on request.</span></li>
+            <li data-image="/foodimg/sardine.jpg">Fish/Sardine Bread 
+                <span>Made on request with fish fillings.</span></li>
+            <li data-image="/foodimg/sour dough.jpg">Meat Bread
+                 <span>Made on request with meat fillings.</span></li>
+            <li data-image="/foodimg/oat bread.jpg">Oat Bread
+                 <span>Specially made with oat for folks who are watching their health and diets and those who enjoy oats.</span></li>
+            <li data-image="/foodimg/wheat.jpg">Wheat Bread
+                 <span>Made with wheat.</span></li>
+            <li data-image="/foodimg/white bread.jpg">White Bread
+                 <span>Made with all-purpose flour.</span></li>
+            <li data-image="/foodimg/eziekel bread.png">Ezekiel Bread
+                 <span>Made with six grains and flours (sprout or unsprouted): whole wheat, spelt, barley, millet, lentils, and soybeans.</span></li>
+            <li data-image="/foodimg/baguette 1.jpg">Baguette 
+                <span>Made to be crusty and airy.</span></li>
+            <li data-image="/foodimg/grains bread.jpg">Multigrain Bread</li>
+            <li data-image="/foodimg/glutenfree.jpg">Gluten Free Bread</li>
+        </ul>
+       
+
+        <h2>Pastries</h2>
+        <ul class="menu">
+            <li data-image="/foodimg/croissant.jpg">Croissant <span>Flaky, buttery, and golden brown.</span></li>
+            <li data-image="/foodimg/cinammon rolls.jpg">Cinnamon Rolls <span>Made differently for sugar lovers and non-sugar lovers.</span></li>
+            <li data-image="/foodimg/meatpie.jpg">Meat Pie <span>Can be made with fish or meat, tailored to customer’s request.</span></li>
+            <li data-image="/foodimg/doughnuts.jpg">Doughnuts <span>Made with the flour of your choice.</span></li>
+            <li data-image="/foodimg/sugar free.jpg">Sugar-Free Pastries</li>
+            <li data-image="/foodimg/granola.jpg">Healthy Snacks (Granola Bars, Nut-Based Snacks)</li>
+            <li data-image="/foodimg/scones.jpg">Scones</li>
+            <li data-image="/foodimg/spring rolls.jpg">Spring Rolls</li>
+            <li data-image="/foodimg/samosa.jpg">Samosa</li>
+        </ul>
+
+        <h2>Breakfast Items</h2>
+        <ul class="menu">
+            <li data-image="/foodimg/muffins.jpg">Muffins and Cakes (Made upon request with various flours)</li>
+            <li data-image="/foodimg/waffles.jpg">Waffles</li>
+        </ul>
+        <h2 style="font-size: 2rem;">Drinks</h2>
+        <div class="menu-description">
+            All our drinks are healthy fruit and grain-based, made fresh with no preservatives, and are available upon request.
+        </div>
+        <ul class="menu">
+            <li data-image="/foodimg/zobo.jpg">Hibiscus Flower Drink</li>
+            <li data-image="/foodimg/tigernut.png">Tiger-nut</li>
+            <li data-image="/foodimg/smoothie- green.jpg">Vegetable Smoothies</li>
+            <li data-image="/foodimg/smoothies.jpg">fruits Smoothies</li>
+            <li data-image="/foodimg/fruit drinks.jpg">Fruit Drinks</li>
+        </ul>
+
+        <div class="menu-description">
+            All our drinks are healthy fruit and grain-based, made fresh with no preservatives, and are available upon request. We offer Hibiscus Flower Drink, Millet-based Drink, Tiger-nut Drink, Smoothies, and Natural Fruit Drinks.
+        </div>
+
+        <h2>Other Items</h2>
+        <ul class="menu">
+            <li data-image="/foodimg/chin chin.jpg">Chin-Chin (A Nigerian snack made with flour; can be made with any flour of choice)</li>
+            <li data-image="/foodimg/kuli kuli.jpg">Kulikuli (A Nigerian snack made with groundnuts, shaped in various ways)</li>
             
-        </h1>
-        
-    </section>
+        </ul>
 
- 
-    
+        <h2 style="font-size: 2rem;">Cooked Food</h2>
+        <p style="font-size: 1.7rem; font-weight: bold;">Cooked food is strictly available on request.</p>
 
-    <section class="our-vision">
-        <h2>Our Vision</h2>
-        <p>To be the trusted source for fresh, healthy, and delicious baked foods tailored to individual preferences, <br>offering exceptional customer service and guaranteed stress-free satisfaction at affordable prices.</p>
-    </section>
-    
+      
+    </div>
+    <div class="menu-description">
+    <p style="font-weight: bolder;">An important note on allergens. </p>
+
+     
+     <P style="font-weight: bold;"> Whilst we do offer foods to suit different allergies, it's essential to note that we do not run a "free from" kitchen.<br>
+     We take care to ensure that cross contamination is avoided, however cannot guarantee that our products won't come into contact with milk, wheat,soy, and other allergens.    
+  </P>
+
+        Our bread is not made to last for weeks as they are without improver. They should be refrigerated, and special breads can be made with or without yeast based on customer’s request. For long-term storage, keep the bread in the freezer if not consumed within a week.
+    </div>
+
+    <div class="menu-image-container">
+        <img id="menu-image" src="" alt="Food Preview">
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const menuItems = document.querySelectorAll(".menu li");
+            const menuImage = document.getElementById("menu-image");
+
+            menuItems.forEach(item => {
+                item.addEventListener("mouseover", function() {
+                    const imageSrc = this.getAttribute("data-image");
+                    menuImage.src = imageSrc;
+                    menuImage.style.opacity = "1";
+                });
+
+                item.addEventListener("mouseleave", function() {
+                    menuImage.style.opacity = "0"; 
+                });
+            });
+        });
+
+        function toggleMenu() {
+            const navLinks = document.querySelectorAll('.nav-links');
+            navLinks.forEach(nav => nav.classList.toggle('active'));
+        }
+    </script>
 
     <footer class="footer">
         <p>Contact us:</p>
         <p>Email: <a href="mailto:beamofdelightfoods@gmail.com">beamofdelightfoods@gmail.com</a></p>
         <p>Phone: +1 (306) 630-3857</p>
-    
     </footer>
-
-   
-    <script>document.addEventListener('DOMContentLoaded', function() {
-        const logo = document.getElementById('transition-logo');
-        const links = document.querySelectorAll('a');
-      
-        function showLogo(callback) {
-          logo.classList.add('show');
-          logo.classList.remove('hide');
-          setTimeout(() => {
-            logo.classList.add('hold');
-            setTimeout(callback, 1000); // Hold for 1 second
-          }, 500); // Initial transition duration
-        }
-      
-        function hideLogo() {
-          logo.classList.remove('hold');
-          setTimeout(() => {
-            logo.classList.add('hide');
-          }, 1000); // Delay for 1 second before starting the transition to hide
-        }
-      
-        links.forEach(link => {
-          link.addEventListener('click', function(event) {
-            event.preventDefault();
-            const destination = event.target.href;
-      
-            showLogo(function() {
-              window.location.href = destination;
-            });
-          });
-        });
-      
-        window.addEventListener('load', function() {
-          hideLogo();
-        });
-      });
-      
-      </script>
-    <script>
-        function toggleMenu() {
-            const navLinks = document.querySelectorAll('.nav-links');
-            navLinks.forEach(nav => nav.classList.toggle('active'));
-        }
-
-    </script>
 </body>
 </html>

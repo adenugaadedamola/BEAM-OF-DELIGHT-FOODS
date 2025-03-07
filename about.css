@@ -9,9 +9,12 @@ body {
     background-color: rgb(214, 164, 98);
     color:#5a3e36;
 }
+body {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+}
 
 header {
-    background: linear-gradient(to bottom, #ee722f, rgb(214, 164, 98)); 
+    background: linear-gradient(to bottom, #782c03, rgb(214, 164, 98)); 
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -77,14 +80,13 @@ nav {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
-    width: 40%;
-    height: 100%;
-    background: url('bakeryfiles/Orange.svg') no-repeat center center/cover;
-    opacity: 0.3; /* Adjust the opacity for translucency */
-    z-index: -1; /* Ensure background image is below the content */
+    left:-60;
+    width: 60%;
+    height: 60%;
 }
 
+   
+   
 
 .about-section h2 {
     font-size: 3rem;
@@ -130,7 +132,7 @@ nav {
 }
 
 .footer {
-    background-color: #ee722f;
+    background-color: #782c03;
     color: white;
     padding: 20px;
     text-align: center;
