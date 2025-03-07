@@ -121,7 +121,7 @@
 
     </style>
 </head>
-<body style=" overflow-x: hidden;  width: 100%;margin: 0;">
+<body style=" overflow-x: hidden;  width: 100%;margin: 0;box-sizing: border-box;">
     <header>
         <nav>
             <div class="menu-icon" onclick="toggleMenu()">
@@ -149,13 +149,14 @@
         </nav>
     </header>
 
-    <div class="menu-container">
+    <div class="menu-container" style="box-sizing: border-box; overflow: hidden;">
         <div class="menu-header">Our Menu</div>
         <div class="menu-description" style="font-weight: bolder; font-size: 1.5rem;">
          Our Menu is NOT limited to the following ingridients/flavours we also work on request, so if you have a request, please contact us!!!
          <img  src="bakeryfiles/Artboard 1.png" alt="Translucent Background 2" class="translucent-background-2">
        
         </div>
+        
 
         <!-- Bread Section -->
         <h2 style="font-size:2rem; ">Breads</h2>
@@ -229,7 +230,7 @@
 
       
     </div>
-    <div class="menu-description">
+    <div class="menu-description"  style=" overflow-x: hidden;  width: 100%;margin: 0; height: auto;box-sizing: border-box;" >
     <p style="font-weight: bolder;">An important note on allergens. </p>
 
      
@@ -240,8 +241,9 @@
         Our bread is not made to last for weeks as they are without improver. They should be refrigerated, and special breads can be made with or without yeast based on customer’s request. For long-term storage, keep the bread in the freezer if not consumed within a week.
     </div>
 
-    <div class="menu-image-container">
-        <img id="menu-image" src="" alt="Food Preview">
+    <div class="menu-image-container" style="box-sizing: border-box;">
+        <img id="menu-image" src="" alt="Food Preview" style=" max-width: 100%;
+    height: auto;">
     </div>
 
     <script>
