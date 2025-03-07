@@ -11,6 +11,9 @@ body {
 body {
     font-size: clamp(1rem, 2vw, 1.5rem);
 }
+.no-scroll {
+    overflow: hidden;
+}
 
 header {
     background: linear-gradient(to bottom,  #782c03, rgb(214, 164, 98)); /* Gradient black */

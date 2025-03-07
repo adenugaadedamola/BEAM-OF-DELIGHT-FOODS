@@ -107,7 +107,9 @@
     transform: rotate(-10deg);
     z-index: -1; /* Ensures it remains below foreground content */
 }
-
+.no-scroll {
+    overflow: hidden;
+}
 
     </style>
 </head>
@@ -243,6 +245,7 @@
         function toggleMenu() {
             const navLinks = document.querySelectorAll('.nav-links');
             navLinks.forEach(nav => nav.classList.toggle('active'));
+            document.body.classList.toggle("no-scroll"); 
         }
     </script>
 

@@ -102,6 +102,7 @@ To be the trusted source for fresh, healthy, and delicious baked foods tailored 
         function toggleMenu() {
             const navLinks = document.querySelectorAll('.nav-links');
             navLinks.forEach(nav => nav.classList.toggle('active'));
+            document.body.classList.toggle("no-scroll"); 
         }
     </script>
     <script>document.addEventListener('DOMContentLoaded', function() {
