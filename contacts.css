@@ -360,6 +360,7 @@ nav {
         flex-direction: column;
         width: 100%;
         text-align: center;
+        overflow-x: hidden;  width: 100%;margin: 0;
     }
 
     .nav-links li {
@@ -381,9 +382,12 @@ nav {
     }
 }
 
-.scrolled {
-    background-color: #000; /* Change navbar background color when scrolled */
+
+img {
+    max-width: 100%;
+    height: auto;
 }
+
 #transition-logo {
     position: fixed;
     top: 0;
