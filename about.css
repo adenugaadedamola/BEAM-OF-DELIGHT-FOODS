@@ -209,6 +209,21 @@ img {
     max-width: 100%;
     height: auto;
 }
+body {
+    font-size: 1rem; /* 1rem equals 16px by default */
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.875rem; /* 0.875rem is 14px */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 0.75rem; /* 0.75rem is 12px */
+    }
+}
 
 .leader-section .leader {
     display: flex;
