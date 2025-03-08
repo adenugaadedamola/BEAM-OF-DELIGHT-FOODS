@@ -24,7 +24,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 /* Hamburger Menu Icon */
 .menu-icon {
@@ -74,7 +74,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Adjust spacing between elements */
-    width: 100%;
+    width: 130%;
     position: relative;
 }
 

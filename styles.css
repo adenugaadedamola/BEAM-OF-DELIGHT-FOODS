@@ -8,6 +8,9 @@ body {
     background-color: rgb(214, 164, 98);
     color: #5a3e36;
     overflow-x: hidden;
+        font-size: 4vw; /* Font size will be 4% of the viewport width */
+    
+    
 }
 body {
     font-size: clamp(1rem, 2vw, 1.5rem);
@@ -440,15 +443,6 @@ nav {
     border-radius: 10px;
     z-index: 2;
 }
-
-
-
-
-
-
-
-
-
 
 
 
